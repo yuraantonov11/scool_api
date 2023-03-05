@@ -9,19 +9,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cploutarchou/node_rest_api_with_mysql.git"
+    "url": "git+https://github.com/yuraantonov11/scool_api.git"
   },
   "keywords": [
     "node",
     "rest-api",
-    "tutorial",
     "mysql",
     "phpMyAdmin",
     "docker",
     "node.js",
     "sequilize"
   ],
-  "author": "Christos Ploutarchou",
+  "author": "Yurii Antonov",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/cploutarchou/node_rest_api_with_mysql/issues"
@@ -41,7 +40,6 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-standard": "^5.0.0",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.21"
   }
 }
