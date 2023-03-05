@@ -35,7 +35,7 @@ router.post("/register", async (req, res) => {
 // Update an existing user
 router.put(
     "/:id",
-    passport.authenticate("jwt", { session: false }),
+    passport.authenticate('jwt', { session: false }),
     async (req, res) => {
       const userId = req.params.id;
 
