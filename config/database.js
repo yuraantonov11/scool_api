@@ -3,13 +3,14 @@ const Sequelize = require("sequelize");
 
 const sequelize = new Sequelize(config);
 
-sequelize
-.authenticate()
-.then(() => {
-  console.log("Database connection has been established successfully.");
-})
-.catch((err) => {
-  console.error("Unable to connect to the database:", err);
-});
+(async () => {
+  try {
+    await sequelize.authenticate();
+    console.log('Connection has been established successfully.');
+  } catch (error) {
+    console.error('Unable to connect to the database:');
+  }
+})();
+
 
 module.exports = sequelize;

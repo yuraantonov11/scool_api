@@ -1,6 +1,6 @@
 {
   "name": "node_rest_api_with_mysql",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Node.js Rest Api with Express, Sequelize, MySQL & phpMyAdmin .",
   "main": "server.js",
   "scripts": {

@@ -1,11 +1,8 @@
-const Sequelize = require("sequelize");
+const sequelize = require("../config/database");
+const Sequelize = require('sequelize');
 const UserModel = require("./User.model");
 const PostModel = require("./Post.model");
 
-const sequelize = new Sequelize("database", "username", "password", {
-  host: "localhost",
-  dialect: "mysql",
-});
 
 const User = new UserModel(sequelize, Sequelize);
 const Post = PostModel(sequelize, Sequelize);
