@@ -1,6 +1,6 @@
 const db = require("../models");
 const postObj = db.posts;
-const Op = db.Sequelize.Op;
+const { Op } = require('sequelize');
 
 // Create and save new Post
 exports.createPost = (request, result) => {

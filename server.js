@@ -2,7 +2,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const server = express();
-const db = require("./models");
 const corsSettings = {
   originL: "http://localhost:8081"
 };
@@ -23,4 +22,3 @@ server.listen(port, () => {
 });
 // Run following function if you want drop existing tables and re-sync database
 // db.dropRestApiTable();
-db.databaseConf.sync();

@@ -7,10 +7,15 @@ const sequelize = new Sequelize("database", "username", "password", {
   dialect: "mysql",
 });
 
-const User = UserModel(sequelize, Sequelize);
+const User = new UserModel(sequelize, Sequelize);
 const Post = PostModel(sequelize, Sequelize);
 
 // Define relationships between models, if any
+
+(async () => {
+  await sequelize.sync({ force: true });
+  // your code here
+})();
 
 const models = {
   User: User,
