@@ -7,11 +7,13 @@ const PostModel = require("./Post.model");
 const User = new UserModel(sequelize, Sequelize);
 const Post = PostModel(sequelize, Sequelize);
 
-// Define relationships between models, if any
-
 (async () => {
+  try {
   await sequelize.sync({ force: true });
-  // your code here
+    console.log('Connection has been established successfully.');
+  } catch (error) {
+    console.error('Unable to connect to the database:');
+  }
 })();
 
 const models = {
