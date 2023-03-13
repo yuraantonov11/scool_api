@@ -1,6 +1,9 @@
 const {Router} = require('express');
 const router = Router();
 
+router.get("/env", function(req, res) {
+  res.send(JSON.stringify(process.env))
+});
 router.get('/healthcheck', (req, res) => {
   // Your existing health check logic here
   const healthcheck = {
