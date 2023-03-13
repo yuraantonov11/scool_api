@@ -7,7 +7,7 @@ module.exports = {
   database: process.env.AZURE_MYSQL_DATABASE | "restapi",
   port: process.env.AZURE_MYSQL_PORT | "3306",
   ssl: {
-    ca: readFileSync(process.env.PATH_CA_CERTIFICATE),
+    ca: readFileSync(process.env.PATH_CA_CERTIFICATE).toString(),
   },
   dialect: "mysql",
 };
