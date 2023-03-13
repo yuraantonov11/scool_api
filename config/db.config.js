@@ -8,7 +8,7 @@ module.exports = {
   port: process.env.AZURE_MYSQL_PORT || "3306",
   dialectOptions: {
     ssl: {
-      ca: readFileSync(process.env.PATH_CA_CERTIFICATE || "").toString(),
+      ca: process.env.PATH_CA_CERTIFICATE ? readFileSync(process.env.PATH_CA_CERTIFICATE).toString() : "",
     },
   },
   dialect: "mysql",
