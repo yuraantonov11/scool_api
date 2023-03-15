@@ -2,4 +2,4 @@ name: Deploy to Production
 description: Deploy to production server
 runs:
   using: 'node16'
-  main: 'index.js'
+  main: 'server.js'
