@@ -12,12 +12,17 @@ const config = {
   storage: isProduction ? undefined : ':memory:',
 };
 
-// if(process.env.PATH_CA_CERTIFICATE){
-//   config.dialectOptions = {
-//     ssl: {
-//       ca: readFileSync(process.env.PATH_CA_CERTIFICATE).toString(),
-//     },
-//   };
-// }
+const caCertificatePath = process.env.PATH_CA_CERTIFICATE;
+const caCertificate = readFileSync(caCertificatePath);
+console.log(caCertificate);
+
+if(caCertificate){
+  config.dialectOptions = {
+    ssl: {
+      ca: caCertificate,
+      rejectUnauthorized: true,
+    },
+  };
+}
 
 module.exports = config;
