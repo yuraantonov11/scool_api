@@ -21,7 +21,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Run Tests
-        run: npm test
+        run: npm test --if-present
       - name: Upload Test Results
         uses: actions/upload-artifact@v2
         with:
