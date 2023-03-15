@@ -12,11 +12,11 @@ const config = {
   storage: isProduction ? undefined : ':memory:',
 };
 
+
 const caCertificatePath = process.env.PATH_CA_CERTIFICATE;
+if(caCertificatePath){
 const caCertificate = readFileSync(caCertificatePath);
 console.log(caCertificate);
-
-if(caCertificate){
   config.dialectOptions = {
     ssl: {
       ca: caCertificate,
