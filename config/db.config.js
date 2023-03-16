@@ -16,6 +16,7 @@ const config = {
 const caCertificatePath = process.env.PATH_CA_CERTIFICATE;
 if(caCertificatePath){
 const caCertificate = readFileSync(caCertificatePath);
+console.log('caCertificate');
 console.log(caCertificate);
   config.dialectOptions = {
     ssl: {
