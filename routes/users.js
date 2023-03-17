@@ -1,36 +1,9 @@
 const express = require("express");
-const bcrypt = require("bcryptjs");
 const passport = require("passport");
 const User = require("../models/User.model");
 
 const router = express.Router();
 
-// Register a new user
-router.post("/register", async (req, res) => {
-  const { email, password, role } = req.body;
-
-  try {
-    // Check if user already exists
-    const existingUser = await User.findOne({ where: { email } });
-    if (existingUser) {
-      return res.status(400).json({ message: "User already exists" });
-    }
-
-    // Hash the password
-    const hashedPassword = await bcrypt.hash(password, 10);
-
-    // Create a new user
-    const newUser = await User.create({
-      email,
-      password: hashedPassword,
-      role,
-    });
-
-    return res.status(201).json({ message: "User created successfully" });
-  } catch (error) {
-    return res.status(500).json({ message: error.message });
-  }
-});
 
 // Update an existing user
 router.put(

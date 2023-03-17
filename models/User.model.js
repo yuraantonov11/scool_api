@@ -4,6 +4,11 @@ const bcrypt = require("bcryptjs");
 const sequelize = require("../config/database");
 
 const UserModel = sequelize.define("user", {
+  first_name: {
+    type: Sequelize.STRING,
+    allowNull: false,
+    unique: true,
+  },
   email: {
     type: Sequelize.STRING,
     allowNull: false,
