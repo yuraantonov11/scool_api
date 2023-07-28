@@ -179,7 +179,7 @@ server.get("/", (\_req, res) => {
 });
 
 // set listening ports for request
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 5000;
 
 server.listen(port, () => {
   console.log("Server running on port : " + port );
@@ -296,7 +296,7 @@ server.get("/", (\_req, res) => {
 });
 
 // set listening ports for request
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 5000;
 
 server.listen(port, () => {
   console.log("Server running on port : " + port );
@@ -606,7 +606,7 @@ server.use(bodyParser.urlencoded({ extended: true }));
 server.use("/", api);
 
 // set listening ports for request
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 5000;
 
 server.listen(port, () => {
   console.log(`Server running on port : ${port}`);

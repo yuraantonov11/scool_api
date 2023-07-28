@@ -19,6 +19,8 @@ router.post('/login', [
   const {email, password} = req.body;
 
   try {
+    let users = await User.findAll();
+    console.log(users);
     let user = await User.findOne({
       where: { email }
     });

@@ -8,7 +8,7 @@ const router = express.Router();
 // Update an existing user
 router.put(
     "/:id",
-    passport.authenticate('jwt', { session: false }),
+    passport.authenticate('jwt', { session: false }, undefined),
     async (req, res) => {
       const userId = req.params.id;
 

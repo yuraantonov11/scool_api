@@ -20,6 +20,8 @@ const opts = {
   secretOrKey: process.env.JWT_SECRET,
 };
 
+
+
 passport.use(
     new JwtStrategy(opts, async (jwt_payload, done) => {
       try {
@@ -36,7 +38,7 @@ passport.use(
     })
 );
 
-server.use(passport.initialize());
+server.use(passport.initialize(undefined));
 server.use(cors(corsSettings));
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
